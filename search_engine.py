@@ -19,7 +19,7 @@ _INDEX_CACHE: dict[str, dict] = {}
 
 # ---------------------- 工具函数（复用之前的解析和预处理逻辑） ----------------------
 def load_stopwords(stopwords_path: str | None = None):
-    """加载停用词表，带简单缓存"""
+    """加载停用词表，带简单缓存；若缺失则回退为空集合并给出警告。"""
     path = stopwords_path or DEFAULT_STOPWORDS_PATH
     if path in _STOPWORDS_CACHE:
         return _STOPWORDS_CACHE[path]
@@ -27,8 +27,10 @@ def load_stopwords(stopwords_path: str | None = None):
     try:
         with open(path, "r", encoding="utf-8") as f:
             stopwords = set(f.read().splitlines())
-    except FileNotFoundError as exc:
-        raise ValueError(f"停用词文件不存在：{path}") from exc
+    except FileNotFoundError:
+        # 回退策略：缺少停用词文件时，以空集合继续运行，避免服务直接崩溃
+        print(f"[WARN] 停用词文件不存在：{path}，将以空停用词集合继续运行。")
+        stopwords = set()
 
     _STOPWORDS_CACHE[path] = stopwords
     return stopwords
