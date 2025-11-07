@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>薇</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Microsoft YaHei", sans-serif;
+            line-height: 1.6;
+            background: url('/static/img/background.jpg') no-repeat fixed center;
+            background-size: cover;
+            color: #333;
+        }
+        .top-bar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 12px 20px;
+            background-color: rgba(255, 237, 216, 0.8);
+            border-bottom: 2px solid #ffedd8;
+            z-index: 9000;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        }
+        .main-container {
+            padding: 120px 20px 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .character-display {
+            position: relative;
+            text-align: center;
+            padding: 60px 0;
+            background: #fff7e8;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 12px;
+        }
+        .character {
+            font-size: 200px;
+            color: #504b47;
+            cursor: pointer;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+        .character:hover {
+            transform: translateY(-5px);
+            text-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+        }
+        .related-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .related-item {
+            background: #fff7e8;
+            padding: 15px;
+            border-radius: 6px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .related-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        a, a:visited {
+            color: #c8a172;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        @media (max-width: 768px) {
+            .character {
+                font-size: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <span>求是学术</span>
+        <span>二年级</span>
+    </div>
+    <div class="main-container">
+        <section class="character-display">
+            <div class="character">薇</div>
+        </section>
+            <div class="section">
+                <h3>形</h3>
+                <div style="text-align: center; margin: 15px 0;">
+                    <img src="34.png" style="max-width: 60%; height: auto; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                </div>
+                <div class="reading">
+                    <p>    </p>
+                </div>
+            </div>
+            <div class="section">
+                <h3>义</h3>
+                <div class="reading">
+                    <p>许慎《说文解字》说：“薇，菜也，似藿。从艹，微声。𦵨，籀文薇省。”本义是一种菜，即野豌豆。<br>    </p>
+                </div>
+            </div>
+            <div class="section">
+                <h3>音</h3>
+                <div class="reading">
+                    <p>wēi<br>    </p>
+                </div>
+            </div>
+            <div class="section">
+                <h3>组词</h3>
+                <div class="reading">
+                    <p>蔷薇、薇蕨、薇省、薇垣<br>    </p>
+                </div>
+            </div>
+            <div class="section">
+                <h3>成语故事</h3>
+                <div class="reading">
+                    <p>采薇而食：商朝伯夷叔齐隐居首阳山，宁采苦薇菜充饥也不食周粟。他们唱着歌采薇：“登彼西山兮，采其薇矣……”最终坚守了气节。这个故事告诉我们，做人要有原则，就像薇草虽苦却象征高洁品格。<br>    </p>
+                </div>
+            </div>
+            <div class="section">
+                <h3>用例</h3>
+                <div class="reading">
+                    <p>①野豌豆。豆科，一年或二年生草本。嫩茎，叶可食。《诗‧草虫》：‘言采其薇’。陆疏：‘山菜也。’按：山厓水滨皆生之，即野豌豆也。<br>②蔷薇。宋周密《天香》：“碧脑浮冰，红薇染露。”<br>    </p>
+        </div>
+    </div>
+    <div class="section related-words">
+        <h3>相关汉字</h3>
+        <div class="related-container">
+            {% for item in related_items %}
+            <div class="related-item">
+                <a href="{{ item.url }}">{{ item.text }}</a>
+                <p>{{ item.desc }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+</body>
+</html>

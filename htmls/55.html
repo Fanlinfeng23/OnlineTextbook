@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>哨</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Microsoft YaHei", sans-serif;
+            line-height: 1.6;
+            background: url('/static/img/background.jpg') no-repeat fixed center;
+            background-size: cover;
+            color: #333;
+        }
+        .top-bar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 12px 20px;
+            background-color: rgba(255, 237, 216, 0.8);
+            border-bottom: 2px solid #ffedd8;
+            z-index: 9000;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        }
+        .main-container {
+            padding: 120px 20px 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .character-display {
+            position: relative;
+            text-align: center;
+            padding: 60px 0;
+            background: #fff7e8;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 12px;
+        }
+        .character {
+            font-size: 200px;
+            color: #504b47;
+            cursor: pointer;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+        .character:hover {
+            transform: translateY(-5px);
+            text-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+        }
+        .related-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .related-item {
+            background: #fff7e8;
+            padding: 15px;
+            border-radius: 6px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .related-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        a, a:visited {
+            color: #c8a172;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        @media (max-width: 768px) {
+            .character {
+                font-size: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <span>求是学术</span>
+        <span>二年级</span>
+    </div>
+    <div class="main-container">
+        <section class="character-display">
+            <div class="character">哨</div>
+        </section>
+            <div class="section">
+                <h3>形</h3>
+                <div style="text-align: center; margin: 15px 0;">
+                    <img src="55.png" style="max-width: 60%; height: auto; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                </div>
+                <div class="reading">
+                    <p>    </p>
+                </div>
+            </div>
+            <div class="section">
+                <h3>义</h3>
+                <div class="reading">
+                    <p>许慎《說文解字》说：“不容也。从口肖聲。”<br>    </p>
+                </div>
+            </div>
+            <div class="section">
+                <h3>音</h3>
+                <div class="reading">
+                    <p>shào<br>    </p>
+                </div>
+            </div>
+            <div class="section">
+                <h3>组词</h3>
+                <div class="reading">
+                    <p>哨兵、口哨、花里胡哨、枉矢哨壶、哨所<br>    </p>
+                </div>
+            </div>
+            <div class="section">
+                <h3>成语故事</h3>
+                <div class="reading">
+                    <p>花里胡哨：小猴用彩色羽毛和亮片装饰树屋，得意地请朋友参观。小松鼠摇摇头：“这屋子‘花里胡哨’的，反而看不清原来的样子啦！”原来过分华丽的装饰会掩盖事物本身的美。小朋友，真正的美往往藏在简单和自然之中哦！<br>    </p>
+        </div>
+    </div>
+    <div class="section related-words">
+        <h3>相关汉字</h3>
+        <div class="related-container">
+            {% for item in related_items %}
+            <div class="related-item">
+                <a href="{{ item.url }}">{{ item.text }}</a>
+                <p>{{ item.desc }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+</body>
+</html>

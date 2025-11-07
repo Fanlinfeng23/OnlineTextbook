@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>荫（蔭）</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Microsoft YaHei", sans-serif;
+            line-height: 1.6;
+            background: url('/static/img/background.jpg') no-repeat fixed center;
+            background-size: cover;
+            color: #333;
+        }
+        .top-bar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 12px 20px;
+            background-color: rgba(255, 237, 216, 0.8);
+            border-bottom: 2px solid #ffedd8;
+            z-index: 9000;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        }
+        .main-container {
+            padding: 120px 20px 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .character-display {
+            position: relative;
+            text-align: center;
+            padding: 60px 0;
+            background: #fff7e8;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 12px;
+        }
+        .character {
+            font-size: 200px;
+            color: #504b47;
+            cursor: pointer;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+        .character:hover {
+            transform: translateY(-5px);
+            text-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+        }
+        .related-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .related-item {
+            background: #fff7e8;
+            padding: 15px;
+            border-radius: 6px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .related-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        a, a:visited {
+            color: #c8a172;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        @media (max-width: 768px) {
+            .character {
+                font-size: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <span>求是学术</span>
+        <span>二年级</span>
+    </div>
+    <div class="main-container">
+        <section class="character-display">
+            <div class="character">荫（蔭）</div>
+        </section>
+            <div class="section">
+                <h3>形</h3>
+                <div style="text-align: center; margin: 15px 0;">
+                    <img src="24.png" style="max-width: 60%; height: auto; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                </div>
+                <div class="reading">
+                    <p>    </p>
+                </div>
+            </div>
+            <div class="section">
+                <h3>义</h3>
+                <div class="reading">
+                    <p>许慎《说文解字》说：“荫，艸阴地。从艸，阴声。”本义是指草木之荫。<br>    </p>
+                </div>
+            </div>
+            <div class="section">
+                <h3>音</h3>
+                <div class="reading">
+                    <p>yīn   yìn <br>    </p>
+                </div>
+            </div>
+            <div class="section">
+                <h3>组词</h3>
+                <div class="reading">
+                    <p>树荫、荫凉、封妻荫子、浓荫蔽日、福荫 <br>    </p>
+                </div>
+            </div>
+            <div class="section">
+                <h3>成语故事</h3>
+                <div class="reading">
+                    <p>    封妻荫子：古代有位将军立下大功，皇帝不仅奖赏他，还让他的妻子获得荣誉，儿子也得到官职，这就是“封妻荫子”。它告诉我们，努力奋斗的成果能让全家都受益。小朋友，现在好好学习，将来你的优秀也会让家人感到骄傲哦！<br>    </p>
+                </div>
+            </div>
+            <div class="section">
+                <h3>用例</h3>
+                <div class="reading">
+                    <p>①树荫。《荀子·劝学》：“树成荫而众鸟息焉。”<br>②日影。《左传·昭公元年》：“赵孟视荫曰：‘朝夕不相及，谁能待五？’”杜预注：“荫，日影也。”<br>③遮荫，遮盖。《吕氏春秋·先己》：“松柏成而涂之人已荫矣。”晋陶潜归田园居诗：“榆柳荫后檐，桃李罗堂前。”引申爲庇护，如《淮南子·人间》：“武王荫暍人于樾下，左拥而右扇之，而天下怀其德。”特指子孙因先世功勋而受到封赏，如《隋书·柳述传》：“少以父荫，为太子亲卫。”《新唐书·选举志下》：“三品以上荫曾孙，五品以上荫孙。”<br>    </p>
+        </div>
+    </div>
+    <div class="section related-words">
+        <h3>相关汉字</h3>
+        <div class="related-container">
+            {% for item in related_items %}
+            <div class="related-item">
+                <a href="{{ item.url }}">{{ item.text }}</a>
+                <p>{{ item.desc }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+</body>
+</html>

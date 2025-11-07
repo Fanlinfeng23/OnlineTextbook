@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Microsoft YaHei", sans-serif;
+            line-height: 1.6;
+            background: url('img/background.jpg') no-repeat fixed center;
+            background-size: cover;
+            color: #333;
+        }
+
+        /* 顶部栏最上层设置 */
+        .top-bar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 12px 20px;
+            background-color: rgba(255, 237, 216, 0.8);
+            border-bottom: 2px solid #ffedd8;
+            z-index: 9000;
+            /* 强制最上层 */
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        /* 主容器留出顶部空间 */
+        .main-container {
+            padding: 120px 20px 30px;
+            /* 顶部留白 */
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* 汉字主展示区 */
+        .character-display {
+            position: relative;
+            text-align: center;
+            padding: 60px 0;
+            background: #fff7e8;
+            /* 米白色背景 */
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 12px;
+        }
+
+        .character {
+            font-size: 200px;
+            color: #504b47;
+            cursor: pointer;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+
+        .character:hover {
+            transform: translateY(-5px);
+            text-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+        }
+
+
+        /* 推荐模块优化 */
+        .related-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .related-item {
+            background: #fff7e8;
+            padding: 15px;
+            border-radius: 6px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .related-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        a,
+        a:visited {
+            color: #c8a172;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+
+        /* 响应式优化 */
+        @media (max-width: 768px) {
+            .character {
+                font-size: 200px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top-bar">
+        <span>求是学术</span>
+        <span>二年级</span>
+    </div>
+
+    <!-- 主内容区域 -->
+    <div class="main-container">
+        <section class="character-display">
+            <!-- 中心汉字 -->
+            <div class="character">春</div>
+
+        </section>
+
+        <!-- 其他教学内容 -->
+        <div class="section">
+            <h3>标题</h3>
+
+        </div>
+
+        <div class="section related-words">
+            <h3>相关汉字</h3>
+            <div class="related-container">
+                <!-- 循环渲染4个相关项，假设Flask传入的变量是related_items（列表） -->
+                {% for item in related_items %}
+                <div class="related-item">
+                    <a href="{{ item.url }}">{{ item.text }}</a>
+                    <!-- 可选：如果需要描述文字，也可以动态传入 -->
+                    <p>{{ item.desc }}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

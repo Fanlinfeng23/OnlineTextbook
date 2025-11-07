@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>蒸</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Microsoft YaHei", sans-serif;
+            line-height: 1.6;
+            background: url('/static/img/background.jpg') no-repeat fixed center;
+            background-size: cover;
+            color: #333;
+        }
+        .top-bar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 12px 20px;
+            background-color: rgba(255, 237, 216, 0.8);
+            border-bottom: 2px solid #ffedd8;
+            z-index: 9000;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        }
+        .main-container {
+            padding: 120px 20px 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .character-display {
+            position: relative;
+            text-align: center;
+            padding: 60px 0;
+            background: #fff7e8;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 12px;
+        }
+        .character {
+            font-size: 200px;
+            color: #504b47;
+            cursor: pointer;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+        .character:hover {
+            transform: translateY(-5px);
+            text-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+        }
+        .related-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .related-item {
+            background: #fff7e8;
+            padding: 15px;
+            border-radius: 6px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .related-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        a, a:visited {
+            color: #c8a172;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        @media (max-width: 768px) {
+            .character {
+                font-size: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <span>求是学术</span>
+        <span>二年级</span>
+    </div>
+    <div class="main-container">
+        <section class="character-display">
+            <div class="character">蒸</div>
+        </section>
+            <div class="section">
+                <h3>形</h3>
+                <div style="text-align: center; margin: 15px 0;">
+                    <img src="32.png" style="max-width: 60%; height: auto; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                </div>
+                <div class="reading">
+                    <p>    </p>
+                </div>
+            </div>
+            <div class="section">
+                <h3>义</h3>
+                <div class="reading">
+                    <p>许慎《说文解字》说：“蒸，析麻中榦也。从艹，烝声。䒱，蒸或省火。”本义是去皮的麻秸。<br>    </p>
+                </div>
+            </div>
+            <div class="section">
+                <h3>音</h3>
+                <div class="reading">
+                    <p>zhēng<br>    </p>
+                </div>
+            </div>
+            <div class="section">
+                <h3>组词</h3>
+                <div class="reading">
+                    <p>蒸发、蒸笼、蒸饺、蒸蒸日上、云蒸霞蔚<br>    </p>
+                </div>
+            </div>
+            <div class="section">
+                <h3>成语故事</h3>
+                <div class="reading">
+                    <p>蒸蒸日上：小明的爷爷开了家包子铺，每天清晨蒸笼里冒出热腾腾的白气，包子卖得越来越好，生意就像早晨的太阳一样“蒸蒸日上”。小朋友，只要像小明爷爷一样认真努力，你的学习也会蒸蒸日上哦！<br>    </p>
+                </div>
+            </div>
+            <div class="section">
+                <h3>用例</h3>
+                <div class="reading">
+                    <p>①去皮的麻秸。出自《说文解字》对该字的说解：“蒸，析麻中榦也。”<br>②用麻秸、葭苇、竹、木做成的火炬。《广雅‧释器》：“蒸，炬也。”王念孙疏证：“凡析麻榦及竹木为炬，皆谓之蒸。”<br>③细小的薪柴。《广韵‧蒸韵》：“蒸，粗曰薪，细曰蒸。”《诗‧小雅‧无羊》：“尔牧来思，以薪以蒸。”《淮南子‧主术》：“秋畜疏食，冬伐薪蒸。”<br>④水气上升。如：蒸发；蒸腾。《国语‧周语上》：“阳气俱蒸，土膏其动。”韦昭注：“蒸，升也。”唐孟浩然《望洞庭湖赠张丞相》：“气蒸云梦泽，波撼岳阳城。”<br>⑤热，熏蒸。《素问‧五常政大论》：“其候溽蒸。”王冰注：“蒸，热也。”<br>⑥中医术语，指身体发热。如：变蒸；骨蒸。<br>⑦利用水蒸气的热力使物熟或热。《孟子‧滕文公下》：“阳货矙孔子之亡也，而馈孔子蒸豚。”又指烧焙。宋孔平仲《续世说‧言语》：“古人有言，在德不在险。屈丐蒸土筑城而朕灭之，岂在城也。”<br>⑧因潮湿而污染。《物类相感志》：“夏月衣蒸，以冬瓜汁浸洗，其迹自去。”<br>⑨熏染，化。清罗惇曧《拳变余闻》：“浸淫百年，蒸为民俗。”<br>    </p>
+        </div>
+    </div>
+    <div class="section related-words">
+        <h3>相关汉字</h3>
+        <div class="related-container">
+            {% for item in related_items %}
+            <div class="related-item">
+                <a href="{{ item.url }}">{{ item.text }}</a>
+                <p>{{ item.desc }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+</body>
+</html>

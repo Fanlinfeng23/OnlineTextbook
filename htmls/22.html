@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>茸</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Microsoft YaHei", sans-serif;
+            line-height: 1.6;
+            background: url('/static/img/background.jpg') no-repeat fixed center;
+            background-size: cover;
+            color: #333;
+        }
+        .top-bar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 12px 20px;
+            background-color: rgba(255, 237, 216, 0.8);
+            border-bottom: 2px solid #ffedd8;
+            z-index: 9000;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        }
+        .main-container {
+            padding: 120px 20px 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .character-display {
+            position: relative;
+            text-align: center;
+            padding: 60px 0;
+            background: #fff7e8;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 12px;
+        }
+        .character {
+            font-size: 200px;
+            color: #504b47;
+            cursor: pointer;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+        .character:hover {
+            transform: translateY(-5px);
+            text-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+        }
+        .related-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .related-item {
+            background: #fff7e8;
+            padding: 15px;
+            border-radius: 6px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .related-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        a, a:visited {
+            color: #c8a172;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        @media (max-width: 768px) {
+            .character {
+                font-size: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <span>求是学术</span>
+        <span>二年级</span>
+    </div>
+    <div class="main-container">
+        <section class="character-display">
+            <div class="character">茸</div>
+        </section>
+            <div class="section">
+                <h3>形</h3>
+                <div style="text-align: center; margin: 15px 0;">
+                    <img src="22.png" style="max-width: 60%; height: auto; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                </div>
+                <div class="reading">
+                    <p>    </p>
+                </div>
+            </div>
+            <div class="section">
+                <h3>义</h3>
+                <div class="reading">
+                    <p>许慎《说文解字》说：“茸，艸茸茸貌。从艸，聦省声。”本义是草初生纤细柔软的样子。<br>    </p>
+                </div>
+            </div>
+            <div class="section">
+                <h3>音</h3>
+                <div class="reading">
+                    <p>róng <br>    </p>
+                </div>
+            </div>
+            <div class="section">
+                <h3>组词</h3>
+                <div class="reading">
+                    <p>茸毛、茸茸、绿茸茸、毛茸茸 <br>    </p>
+                </div>
+            </div>
+            <div class="section">
+                <h3>成语故事</h3>
+                <div class="reading">
+                    <p>    狐裘蒙茸：春秋时，卫国国君卫懿公痴爱养鹤，给鹤穿锦绣貂裘，却不顾百姓饥寒。大臣石祁子劝谏说：“您看那些仙鹤，虽然“狐裘蒙茸”，实则虚有其表，于国无益啊！”懿公不听，最终亡国。小朋友，真正的价值不在外表华丽，而要看是否有益于他人和社会。<br>    </p>
+                </div>
+            </div>
+            <div class="section">
+                <h3>用例</h3>
+                <div class="reading">
+                    <p>①草初生纤细柔软的样子。南朝宋谢灵运《于南山往北山经湖中瞻眺》：“初篁苞緑箨，新蒲含紫茸。”唐韩愈《等有所思联句》：“台镜晦旧晖，庭草滋深茸。”<br>②柔细的（兽毛）。《太平御览》卷八百八十九引东观汉记：“师子……尾端茸毛大如斗。”<br>③鹿茸的简称。《神农本草经》卷二：“鹿茸，味甘温。”宋黄庭坚《夏日梦伯兄寄江南》：“河天月晕鱼生子，槲夜风微鹿养茸。”宋孙光宪《北梦琐言‧逸文》：“南中多鹿……当角解之时，其茸甚痛。”清王士禛《题门人孙贞伯松石间图》：“幽居尽日无人迹，闲看春山鹿养茸。”<br>④木名。《管子‧地员》：“其桑其松，其杞其茸。”尹知章注：“茸，木名。”<br>    </p>
+        </div>
+    </div>
+    <div class="section related-words">
+        <h3>相关汉字</h3>
+        <div class="related-container">
+            {% for item in related_items %}
+            <div class="related-item">
+                <a href="{{ item.url }}">{{ item.text }}</a>
+                <p>{{ item.desc }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+</body>
+</html>

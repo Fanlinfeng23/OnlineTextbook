@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>班</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Microsoft YaHei", sans-serif;
+            line-height: 1.6;
+            background: url('/static/img/background.jpg') no-repeat fixed center;
+            background-size: cover;
+            color: #333;
+        }
+        .top-bar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 12px 20px;
+            background-color: rgba(255, 237, 216, 0.8);
+            border-bottom: 2px solid #ffedd8;
+            z-index: 9000;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        }
+        .main-container {
+            padding: 120px 20px 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .character-display {
+            position: relative;
+            text-align: center;
+            padding: 60px 0;
+            background: #fff7e8;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 12px;
+        }
+        .character {
+            font-size: 200px;
+            color: #504b47;
+            cursor: pointer;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+        .character:hover {
+            transform: translateY(-5px);
+            text-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+        }
+        .related-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .related-item {
+            background: #fff7e8;
+            padding: 15px;
+            border-radius: 6px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .related-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        a, a:visited {
+            color: #c8a172;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        @media (max-width: 768px) {
+            .character {
+                font-size: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <span>求是学术</span>
+        <span>二年级</span>
+    </div>
+    <div class="main-container">
+        <section class="character-display">
+            <div class="character">班</div>
+        </section>
+            <div class="section">
+                <h3>形</h3>
+                <div style="text-align: center; margin: 15px 0;">
+                    <img src="15.png" style="max-width: 60%; height: auto; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                </div>
+                <div class="reading">
+                    <p>    </p>
+                </div>
+            </div>
+            <div class="section">
+                <h3>义</h3>
+                <div class="reading">
+                    <p>许慎《說文解字》说：“班，分瑞玉。从玨，从刀”。会意字，会以刀分玉之意。本义即指分瑞玉。瑞玉是古代玉质的信物，从中分为二，各执其一以为凭信。<br>    </p>
+                </div>
+            </div>
+            <div class="section">
+                <h3>音</h3>
+                <div class="reading">
+                    <p>bān<br>    </p>
+                </div>
+            </div>
+            <div class="section">
+                <h3>组词</h3>
+                <div class="reading">
+                    <p>班长、班级、上班、夜班 <br>    </p>
+                </div>
+            </div>
+            <div class="section">
+                <h3>成语故事</h3>
+                <div class="reading">
+                    <p>科班出身：古时候学戏要进“科班”，从小严格训练。有位名角儿功底扎实，唱念做打样样精，大家都夸他：“不愧是科班出身！”这词后来形容受过正规教育或专业训练的人。小朋友，无论学什么，打好基础、持之以恒，才能像“科班出身”一样底气十足呀！<br>    </p>
+                </div>
+            </div>
+            <div class="section">
+                <h3>用例</h3>
+                <div class="reading">
+                    <p>①分瑞玉。《书·舜典》：“乃日觐四岳群牧，班瑞于群后。”<br>②引申之又有分别、分开之义。唐李白《送友人》：“挥手自兹去，萧萧班马鸣。”<br>③分给；赏赐。《正字通‧玉部》：“班，凡以物与人亦曰班。”书‧洪范：“武王既胜殷，邦诸侯，班宗彝。”孔传：“赋宗庙彝器酒罇赐诸侯。”《公羊传‧僖公三十一年》：“晋侯执曹伯，班其所取侵地于诸侯也。”何休注：“班者，布徧（还）之辞。”<br>④铺开。《左传‧襄公二十六年》：“伍举奔郑，将遂奔晋。声子将如晋，遇之于郑郊，班荆相与食，而言复故。”杜预注：“班，布也，布荆坐地。”<br>⑤颁布，后写作“颁”。《吕氏春秋‧仲夏》：“游牝别其羣，则絷腾驹，班马正。”高诱注：“班，告也。”<br>⑥次第；位次。《广雅‧释言》：“班，序也。”《仪礼‧既夕礼》：“卒哭，明日以其班祔。”郑玄注：“班，次也。”<br>⑦序列；排列等级。《方言》卷三：“班，列也。”《孟子‧万章下》：“周室班爵禄也如之何？”赵岐注：“班，列也。”《礼记‧曲礼上》：“班朝治军，涖官行法，非礼威严不行。”郑玄注：“班，次也。”孔颖达疏：“次，谓司士正朝仪之位次也。”引申指朝廷上臣下所站的队列。宋沈括《梦溪笔谈‧故事一》：“唐制，两省供奉官东西对立，谓之蛾眉班。”<br>⑧依行业组合的人群，后专用为旧戏曲艺人团体的通称。宋赵彦卫《云麓漫钞》卷十：“金虏官制有文班、武班，若医卜倡优，谓之杂班。每宴集，伶人进曰‘杂班上’，故流传及此。”《水浒全传》第五十八回：“使棍的军班领袖，使鞭的将种堪夸。”<br>    </p>
+        </div>
+    </div>
+    <div class="section related-words">
+        <h3>相关汉字</h3>
+        <div class="related-container">
+            {% for item in related_items %}
+            <div class="related-item">
+                <a href="{{ item.url }}">{{ item.text }}</a>
+                <p>{{ item.desc }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+</body>
+</html>

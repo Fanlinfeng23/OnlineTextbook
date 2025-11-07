@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>检索结果 - 求是学术</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Microsoft YaHei", sans-serif;
+            line-height: 1.6;
+            background: url('{{ url_for('static', filename='img/background.jpg') }}') no-repeat fixed center;
+            background-size: cover;
+            color: #333;
+        }
+
+        .top-bar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 12px 20px;
+            background-color: rgba(255, 237, 216, 0.8);
+            border-bottom: 2px solid #ffedd8;
+            z-index: 9000;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .main-container {
+            padding: 120px 20px 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .results-container {
+            background: #fff7e8;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+        }
+
+        h1 {
+            color: #504b47;
+            border-bottom: 2px solid #ffedd8;
+            padding-bottom: 15px;
+            margin-top: 0;
+        }
+
+        .query-info {
+            color: #666;
+            margin: 20px 0;
+            font-size: 1.1em;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 15px;
+            color: #c8a172;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .back-link:hover {
+            color: #b08a5e;
+            text-decoration: underline;
+        }
+
+        .results-list {
+            margin-top: 30px;
+        }
+
+        .result-item {
+            padding: 20px;
+            border-bottom: 1px dashed #ffedd8;
+            transition: background 0.3s;
+        }
+
+        .result-item:last-child {
+            border-bottom: none;
+        }
+
+        .result-item:hover {
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        .doc-title {  /* 标题样式 */
+            font-weight: bold;
+            color: #504b47;
+            font-size: 1.2em;
+        }
+
+        .score {
+            color: #888;
+            margin-left: 10px;
+            font-size: 0.9em;
+        }
+
+        .doc-link {
+            display: inline-block;
+            margin-top: 8px;
+            color: #c8a172;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
+
+        .doc-link:hover {
+            color: #b08a5e;
+            text-decoration: underline;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 60px 20px;
+            color: #666;
+            font-size: 1.2em;
+        }
+
+        @media (max-width: 768px) {
+            .results-container {
+                padding: 20px;
+            }
+            .result-item {
+                padding: 15px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <span>求是学术</span>
+        <span style="margin-left: 20px;">二年级</span>
+    </div>
+
+    <div class="main-container">
+        <div class="results-container">
+            <a href="/" class="back-link">← 返回检索页</a>
+            <h1>检索结果</h1>
+
+            <div class="query-info">
+                检索词：<strong>{{ query }}</strong>，共找到 {{ total }} 个匹配结果
+            </div>
+
+            <div class="results-list">
+                {% if results %}
+                    {% for doc_id, score, title in results %}  <!-- 遍历包含标题的结果 -->
+                    <div class="result-item">
+                        <p>
+                            <span class="doc-title">{{ title }}</span>  <!-- 显示HTML标题 -->
+                            <span class="score">（匹配度：{{ "%.2f"|format(score) }}）</span>
+                        </p>
+                        <p>
+                            <a href="/doc/{{ doc_id }}" class="doc-link" target="_blank">
+                                查看详情 →
+                            </a>
+                        </p>
+                    </div>
+                    {% endfor %}
+                {% else %}
+                    <div class="no-results">
+                        未找到匹配的文档，请尝试其他检索词
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

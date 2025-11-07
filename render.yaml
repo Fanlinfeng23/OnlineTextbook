@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: online-textbook
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    envVars:
+      - key: HTMLS_DIR
+        value: htmls
+      - key: STOPWORDS_PATH
+        value: data/stopwords.txt
+      - key: INDEX_PATH
+        value: bm25_index.pkl
+

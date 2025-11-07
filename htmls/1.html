@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>示例：凶</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Microsoft YaHei", sans-serif;
+            line-height: 1.6;
+            background: url('/static/img/background.jpg') no-repeat fixed center;
+            background-size: cover;
+            color: #333;
+        }
+        .top-bar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 12px 20px;
+            background-color: rgba(255, 237, 216, 0.8);
+            border-bottom: 2px solid #ffedd8;
+            z-index: 9000;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        }
+        .main-container {
+            padding: 120px 20px 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .character-display {
+            position: relative;
+            text-align: center;
+            padding: 60px 0;
+            background: #fff7e8;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 12px;
+        }
+        .character {
+            font-size: 200px;
+            color: #504b47;
+            cursor: pointer;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+        .character:hover {
+            transform: translateY(-5px);
+            text-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+        }
+        .related-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .related-item {
+            background: #fff7e8;
+            padding: 15px;
+            border-radius: 6px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .related-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        a, a:visited {
+            color: #c8a172;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        @media (max-width: 768px) {
+            .character {
+                font-size: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <span>求是学术</span>
+        <span>二年级</span>
+    </div>
+    <div class="main-container">
+        <section class="character-display">
+            <div class="character">示例：凶</div>
+        </section>
+            <div class="section">
+                <h3>形</h3>
+                <div style="text-align: center; margin: 15px 0;">
+                    <img src="1.png" style="max-width: 60%; height: auto; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                </div>
+                <div class="reading">
+                    <p>    </p>
+                </div>
+            </div>
+            <div class="section">
+                <h3>义</h3>
+                <div class="reading">
+                    <p>许慎《說文解字》说：“凶，惡也。象地穿交陷其中也。”“凶”字是象形字，描绘了物体交相陷入坑中的情景，本义是险恶、不吉利。还可以表示凶恶、恶人、饥荒、厉害等意义，还指杀人或伤人的行为，如用“凶”组词“行凶”。<br>    </p>
+                </div>
+            </div>
+            <div class="section">
+                <h3>音</h3>
+                <div class="reading">
+                    <p>xiōng<br>    </p>
+                </div>
+            </div>
+            <div class="section">
+                <h3>组词</h3>
+                <div class="reading">
+                    <p>凶恶、行凶、逢凶化吉、凶神恶煞<br>    </p>
+                </div>
+            </div>
+            <div class="section">
+                <h3>成语故事</h3>
+                <div class="reading">
+                    <p>逢凶化吉：意为遭遇的不幸与灾难转化为吉祥。宋代李纲被流放东山岭，算卦人说他会“逢凶化吉”。不久新皇帝上任，坏人受罚，李纲果真回京当宰相，东山再起。小朋友，遇到坏事别慌，默默努力、等待时机就可能转好运！<br>凶神恶煞：古人传说，天上有“凶神”，脸青牙长，专吓人；地上有“恶煞”，红发大眼，专捣乱。人们把最可怕、最凶的样子叫“凶神恶煞”。小朋友，这只是传说，现实中见到凶恶的人，要马上告诉大人！<br>    </p>
+                </div>
+            </div>
+            <div class="section">
+                <h3>用例</h3>
+                <div class="reading">
+                    <p>①险恶、不吉利。<br>《尔雅·释言》：“凶，咎也。”《尔雅》是中国古代著名的综合性辞典，其中提到，“凶”有“灾咎”的意思。<br>《诗·王风·兔爰》：“我生之后，逢此百凶，尚寐无聪。”《诗经》是一部诗歌集，这里唱道：“自从我出生之后，遭遇种种祸端，但愿长睡听不见。”<br>②凶恶；残暴。《尚书‧泰誓》：“凶人爲不善，亦惟日不足。”兇惡的人做壞事，也總是唯恐時間不夠。<br>③早死；夭亡。《玉篇‧凶部》：“凶，短折也。”孔穎達：“未齔曰凶，未冠曰短，未婚曰折。”龀是乳牙换恒牙的阶段，在此之前夭折称为“凶”。<br>④饥荒。《墨子》：“今岁凶民饥道。”这是说年成不好，遇到大饥荒，道路上有困饿的百姓。<br>⑤恶人。曹操《蒿里行》：“關東有義士，興兵討羣凶。”这句诗讲的是关东义士起兵討伐恶人。<br>⑥厉害。如：病势很凶；闹得太凶。明湯顯祖《牡丹亭‧閨塾》：“這早晚了，還不見女學生進館，卻也嬌養的凶。”<br>⑦讼。《史記‧五帝本紀》：“堯曰：‘吁，頑凶，不用’。”張守節正義：“凶，訟也。言丹朱心既頑嚚，又好争訟，不可用之。”按：“頑凶”，《尚書‧堯典》作“嚚訟”。这里是尧评价儿子丹朱喜欢争讼，不适合做君主。<br>⑧恐惧。《國語‧晋語一》：“敵入而凶，救敗不暇，誰能退敵？”韋昭注：“凶，猶凶凶，恐惧也。”这里意为敌人进入时感到害怕。<br>    </p>
+        </div>
+    </div>
+    <div class="section related-words">
+        <h3>相关汉字</h3>
+        <div class="related-container">
+            {% for item in related_items %}
+            <div class="related-item">
+                <a href="{{ item.url }}">{{ item.text }}</a>
+                <p>{{ item.desc }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+</body>
+</html>

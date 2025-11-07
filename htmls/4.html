@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>示</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Microsoft YaHei", sans-serif;
+            line-height: 1.6;
+            background: url('/static/img/background.jpg') no-repeat fixed center;
+            background-size: cover;
+            color: #333;
+        }
+        .top-bar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 12px 20px;
+            background-color: rgba(255, 237, 216, 0.8);
+            border-bottom: 2px solid #ffedd8;
+            z-index: 9000;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        }
+        .main-container {
+            padding: 120px 20px 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .character-display {
+            position: relative;
+            text-align: center;
+            padding: 60px 0;
+            background: #fff7e8;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 12px;
+        }
+        .character {
+            font-size: 200px;
+            color: #504b47;
+            cursor: pointer;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+        .character:hover {
+            transform: translateY(-5px);
+            text-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+        }
+        .related-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .related-item {
+            background: #fff7e8;
+            padding: 15px;
+            border-radius: 6px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .related-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        a, a:visited {
+            color: #c8a172;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        @media (max-width: 768px) {
+            .character {
+                font-size: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <span>求是学术</span>
+        <span>二年级</span>
+    </div>
+    <div class="main-container">
+        <section class="character-display">
+            <div class="character">示</div>
+        </section>
+            <div class="section">
+                <h3>形</h3>
+                <div style="text-align: center; margin: 15px 0;">
+                    <img src="4.png" style="max-width: 60%; height: auto; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                </div>
+                <div class="reading">
+                    <p>    </p>
+                </div>
+            </div>
+            <div class="section">
+                <h3>义</h3>
+                <div class="reading">
+                    <p>许慎《說文解字》说：“示，天垂象，见吉凶，所以示人也。从二；三垂，日、月、星也。观乎天文以察时变，示，神事也。𥘅，古文示。”许慎将“示”字的说解与他自己的天人观结合起来，认为“示”的三纵笔分别代表日、月、星，上面的横划代表天，“示”是天垂示现象给人们观察的意思。但从古文字材料看，“示”字与“主”字本是一字之分化，象神主之形。<br>    </p>
+                </div>
+            </div>
+            <div class="section">
+                <h3>音</h3>
+                <div class="reading">
+                    <p>shì<br>    </p>
+                </div>
+            </div>
+            <div class="section">
+                <h3>组词</h3>
+                <div class="reading">
+                    <p>表示、示范、指示、告示、展示、示弱 <br>    </p>
+                </div>
+            </div>
+            <div class="section">
+                <h3>成语故事</h3>
+                <div class="reading">
+                    <p> 发踪指示：猎人发现兔子脚印，立刻“发踪指示”，让猎犬们顺着踪迹追赶。聪明的猎犬们汪汪叫着，很快找到了兔子！这说明发现线索后，要及时行动哦。小朋友，我们也要学会观察细节，发现线索就马上行动！ <br>    </p>
+                </div>
+            </div>
+            <div class="section">
+                <h3>用例</h3>
+                <div class="reading">
+                    <p>①泛指把事物摆出来或指出来使人知道。如：示范；示众；展示；出示。唐慧苑《华严经音义上》引《仓颉篇》：“示，现也。”《尚书‧武成》：“归马于华山之阳，放牛于桃林之野，示天下弗服。”《新序‧杂事一》：“秦欲观楚之宝器，吾和氏之璧，随侯之珠，可以示诸？”唐李白《赠范金乡二首之一》：“祗应自索漠，留舌示山妻。”<br>②告诉；告知。《玉篇‧示部》：“示，示者，语也，以事告人曰示也。”《正字通‧示部》：“示，告也。”《楚辞‧九章‧怀沙》：“怀瑾握瑜兮，穷不知所示。”王逸注：“示，语也。”《战国策‧秦策二》：“医扁鹊见秦武王，武王示之病。”高诱注：“示，语也。”<br>③教导。《礼记‧檀弓下》：“国奢则示之以俭，国俭则示之以礼。”《文选‧张衡〈东京赋〉》：“三令五申，示戮斩牲。”李善注引薛综曰：“示，教也。”《盐铁论‧本议》：“夫导民以德，则民归厚；示民以利，则民俗薄。”<br>④公文；告示。《释名‧释书契》：“示，示也，过所至关津以示之也。”《镜花缘》第三十八回：“那看的人虽如人山人海，好在国王久已出示，毋许驱逐闲人，悉听庶民瞻仰。”也泛指指示，命令。《儒林外史》第五十回：“戏子们请老爷的示：还是伺候，还是回去？”<br>⑤对别人来信的敬称。如：惠示；来示；赐示。<br>    </p>
+        </div>
+    </div>
+    <div class="section related-words">
+        <h3>相关汉字</h3>
+        <div class="related-container">
+            {% for item in related_items %}
+            <div class="related-item">
+                <a href="{{ item.url }}">{{ item.text }}</a>
+                <p>{{ item.desc }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+</body>
+</html>

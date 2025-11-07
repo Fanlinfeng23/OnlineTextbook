@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>蒙</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Microsoft YaHei", sans-serif;
+            line-height: 1.6;
+            background: url('/static/img/background.jpg') no-repeat fixed center;
+            background-size: cover;
+            color: #333;
+        }
+        .top-bar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 12px 20px;
+            background-color: rgba(255, 237, 216, 0.8);
+            border-bottom: 2px solid #ffedd8;
+            z-index: 9000;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        }
+        .main-container {
+            padding: 120px 20px 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .character-display {
+            position: relative;
+            text-align: center;
+            padding: 60px 0;
+            background: #fff7e8;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 12px;
+        }
+        .character {
+            font-size: 200px;
+            color: #504b47;
+            cursor: pointer;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+        .character:hover {
+            transform: translateY(-5px);
+            text-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+        }
+        .related-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .related-item {
+            background: #fff7e8;
+            padding: 15px;
+            border-radius: 6px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .related-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        a, a:visited {
+            color: #c8a172;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        @media (max-width: 768px) {
+            .character {
+                font-size: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <span>求是学术</span>
+        <span>二年级</span>
+    </div>
+    <div class="main-container">
+        <section class="character-display">
+            <div class="character">蒙</div>
+        </section>
+            <div class="section">
+                <h3>形</h3>
+                <div style="text-align: center; margin: 15px 0;">
+                    <img src="31.png" style="max-width: 60%; height: auto; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                </div>
+                <div class="reading">
+                    <p>    </p>
+                </div>
+            </div>
+            <div class="section">
+                <h3>义</h3>
+                <div class="reading">
+                    <p>许慎《说文解字》说：“蒙，王女也。从艹，冡声。”“王女”指女萝，“蒙”本义是指草名，即菟丝。为一年生缠绕寄生草本植物。<br>    </p>
+                </div>
+            </div>
+            <div class="section">
+                <h3>音</h3>
+                <div class="reading">
+                    <p>mēng　méng　měng<br>    </p>
+                </div>
+            </div>
+            <div class="section">
+                <h3>组词</h3>
+                <div class="reading">
+                    <p>启蒙、蒙蔽、蒙昧、蒙受、蒙混、蒙在鼓里<br>    </p>
+                </div>
+            </div>
+            <div class="section">
+                <h3>成语故事</h3>
+                <div class="reading">
+                    <p>蒙在鼓里：小兔子捡到个魔术鼓，每次敲响就会起大雾，小动物们全被蒙在鼓里，以为天黑了。其实呀，是鼓声变出了雾气，让大家看不清真相。小朋友，遇到奇怪的事要多动脑筋，可别像小动物们一样被“蒙在鼓里”哦！<br>    </p>
+                </div>
+            </div>
+            <div class="section">
+                <h3>用例</h3>
+                <div class="reading">
+                    <p>读méng时：<br>①草名，即菟丝。旋花科，一年生缠绕寄生草本。茎很细，呈丝状，黄白色，随处生有吸盘，附着在豆科、菊科、藜科等植物上。叶退化，开白色小花。种子入药。《管子‧地员》：“群药安生，姜与桔梗，小辛大蒙。”<br>②覆盖。唐杜甫《诸将五首之一》：“昨日玉鱼蒙葬地，早时金碗出人间。”<br>③假冒。《史记‧魏其武安侯列传》：“夫父张孟，尝为颍阴侯婴舍人，得幸，因进之至二千石，故蒙灌氏姓为灌孟。”<br>④隐瞒；欺骗。如：蒙骗。《左传‧昭公二十七年》：“鄢氏、费氏自以为王，专祸楚国，弱寡王室，蒙王与令尹以自利也。”杜预注：“蒙，欺也。”唐杜甫《岁晏行》：“刻泥为之最易得，好恶不合长相蒙。”<br>⑤关联；符合。《徐霞客游记‧附编‧永昌志略》：“如澜沧江在永昌，而澜沧卫在北胜，各不相蒙。”<br>⑥受；承接。《孟子‧离娄下》：“西子蒙不洁。”《元史‧河渠志》：“黄河决溢，千里蒙害。”<br>⑦敬辞。受到。晋李密《陈情表》：“寻蒙国恩，除臣洗马。”宋王安石答司马谏议书：“昨日蒙教。”<br>⑧冒着。《韩非子‧孤愤》：“故法术之士安能蒙死亡而进其说？”<br>⑨愚昧；无知。《素问‧举痛论》：“令騐于已而发蒙解惑，可得而闻乎？”<br>⑩幼小貌。《易‧序卦》：“物生必蒙……蒙者蒙也，物之稺也。”李鼎祚集解引郑玄曰：“蒙，幼小之貌，齐人谓萌为蒙也。”<br>⑪天色昏暗。《汉书‧扬雄传上》：“雾集蒙合兮。”顔师古注：“雾，地气发也。蒙，天气下也。如雾之集，如蒙之合也。”<br>⑫杂色。《诗‧秦风‧小戎》：“蒙伐有苑，虎韔镂膺。”毛传：“蒙，讨羽也。”郑玄笺：“蒙，痝也。讨，杂也，画杂羽之文于伐，故曰庬伐。”<br>⑬通“矇”，眼失明。《白氏六帖‧瞽宗第七引诗》：“矇瞍奏公。”<br>读měng时：<br>蒙古国、蒙古族的简称。<br>读mēng时（主要是现代汉语的用法）：<br>①昏迷。如：眼发黑，头发蒙；他被绊倒，一下摔蒙了。<br>②猜测。如：别瞎蒙；这回叫你蒙对了。<br>    </p>
+        </div>
+    </div>
+    <div class="section related-words">
+        <h3>相关汉字</h3>
+        <div class="related-container">
+            {% for item in related_items %}
+            <div class="related-item">
+                <a href="{{ item.url }}">{{ item.text }}</a>
+                <p>{{ item.desc }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+</body>
+</html>

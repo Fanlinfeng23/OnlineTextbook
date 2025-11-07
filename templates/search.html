@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>汉字检索 - 求是学术</title>
+    <style>
+        /* 复用示例页面的核心样式 */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Microsoft YaHei", sans-serif;
+            line-height: 1.6;
+            background: url('{{ url_for('static', filename='img/background.jpg') }}') no-repeat fixed center;
+            background-size: cover;
+            color: #333; /* 文本主色 */
+        }
+
+        .top-bar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 12px 20px;
+            background-color: rgba(255, 237, 216, 0.8); /* 顶部栏背景 */
+            border-bottom: 2px solid #ffedd8; /* 顶部栏边框 */
+            z-index: 9000;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .main-container {
+            padding: 120px 20px 30px; /* 顶部留出120px给固定栏 */
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* 检索框容器样式 */
+        .search-container {
+            background: #fff7e8; /* 内容区背景（米白） */
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 60px 40px;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #504b47; /* 标题色（深棕） */
+            margin-bottom: 40px;
+            font-size: 2.2em;
+        }
+
+        .search-box {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        #query {
+            width: 60%;
+            min-width: 300px;
+            padding: 14px 20px;
+            border: 2px solid #ffedd8;
+            border-radius: 8px;
+            font-size: 16px;
+            font-family: "Microsoft YaHei", sans-serif;
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+        button {
+            padding: 14px 30px;
+            background-color: #c8a172; /* 按钮色（棕黄） */
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-family: "Microsoft YaHei", sans-serif;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        button:hover {
+            background-color: #b08a5e; /* 按钮悬停色（深棕黄） */
+            transform: translateY(-2px);
+        }
+
+        .error-message {
+            color: #d9534f; /* 错误提示色 */
+            margin-top: 20px;
+            font-size: 1.1em;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 768px) {
+            .search-container {
+                padding: 40px 20px;
+            }
+            h1 {
+                font-size: 1.8em;
+            }
+            #query {
+                width: 100%;
+                min-width: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 复用顶部栏 -->
+    <div class="top-bar">
+        <span>求是学术</span>
+        <span style="margin-left: 20px;">二年级</span>
+    </div>
+
+    <div class="main-container">
+        <div class="search-container">
+            <h1>汉字检索</h1>
+            <form action="/search" method="post" class="search-box">
+                <input type="text" id="query" name="query"
+                       placeholder="请输入检索词（如：春、文化内涵）" required>
+                <button type="submit">检索</button>
+            </form>
+            {% if error %}
+                <div class="error-message">{{ error }}</div>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
